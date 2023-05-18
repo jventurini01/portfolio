@@ -1,0 +1,301 @@
+---
+title: "Google Data Analytics R Markdown Notebook"
+author: "Joseph Venturini"
+date: "2023-05-15"
+output: html_document
+---
+```{r setup, include=FALSE}
+options(repos = list(CRAN="http://cran.rstudio.com/"))
+knitr::opts_chunk$set(echo = TRUE)
+```
+# Introduction
+
+Over the past few months, I have been pursuing the Google Data Analytics Professional Certificate on Coursera. Throughout the course of this certificate I had the opportunity to utilize software for Data Analytics, including:
+
+* Spreadsheets (Google Sheets and Excel)
+* SQL (Structured Query Language)
+    + Using Google BigQuery
+* R and RStudio
+
+This case study, or capstone project, aims to be a culmination of everything I have learned throughout the course (ha, get it?) of this certification. 
+
+## About the company
+
+This case study revolves around a company called Cyclistic, who in 2016 launched a successful bike share offering. The program has grown significantly since, to a fleet of 5,824 bicycles that are geotracked and locked intoo a network of 692 stations across Chicago. 
+
+The marketing strategy they currently use provided flexibility in their pricing plans: single-ride passes, full-day passes, and annual memberships. Customers who putchase single-ride or full-day passes are referred to as casual riders. Customers who purchase annual memberships are Cyclistic Members. 
+
+After the full data Analytics Process: Ask, Prepare, Process, Analyze, Share, and Act, I hope to achieve an end result-- **to be able to recommend marketing strategies to the manager about marketing strategies aiming to convert casual riders into annual members.**
+
+# The Data Analysis Process: Ask, Prepare, Process, Analyze, Share, Act
+
+## Ask 
+
+The first phase of the Data Analysis process is to Ask the right questions to make data-driven decisions.
+What is the problem to be solved here? As mentioned in the introduction, the main goal is to design marketing strategies aimed at converting casual riders into annual members. 
+
+Three good questions before even looking at the data are:
+
+1. How do annual members and casual riders use Cyclistic bikes differently?
+2. Why would casual riders buy Cyclistic Memberships?
+3. How can Cyclistic use digital media to influence casual riders to become members?
+
+## Prepare
+
+I will be analyzing public bike share data found [here](https://divvy-tripdata.s3.amazonaws.com/index.html). 
+The data displayed on the above site is is ordered by month, starting in April 2022, in ascending order every month.
+
+During the SQL courses of the Certificate, a great way to test data for bias and credibility was through an acronym called **ROCCC**.
+
+* Is the data Reliable?
+  + As during this case study we are to assume that this data comes from our own company, this data is as reliable as it can get.
+* Is the data Original?
+  + According to the *About the Company* section, the bikes are geolocated, and the data about their coordinates is sent straight to us. So yes, this data is original.
+* Is the data Comprehensive? 
+  + The data contains various fields of information. In fact, it contains everything we need without missing any defining factors. 
+* Is the data Current?
+  + This data is updated every month. I will be using the period from May 2022 to April 2023. That will be a year's worth of data leading up to last month. The data is, in fact, current. 
+* Is the data Cited?
+  + Yes. This data is cited and made freely available by Motivate International Inc. under [a license](https://ride.divvybikes.com/data-license-agreement).
+
+We are ready to ROCCC and roll!
+
+I will start by installing the necessary packages. I'll go ahead and install all packages I have learned about in the certificate: 
+```{r Installing Packages} 
+
+install.packages("tidyverse")
+install.packages("ggplot2")
+
+library(tidyverse)
+library(ggplot2)
+
+```
+
+* Tidyverse includes many helpful R libraries for Data Analysis
+* ggplot2 allows us when we eventually get to visualization of our data. 
+
+Next, I will gather and merge all of our data, such that it is all together in one place. 
+```{r Gather and Merge Data}
+
+# Gathering data from May 2022 to April 2023
+may22 <- read_csv("202205-divvy-tripdata.csv")
+jun22 <- read_csv("202206-divvy-tripdata.csv")
+jul22 <- read_csv("202207-divvy-tripdata.csv")
+aug22 <- read_csv("202208-divvy-tripdata.csv")
+sep22 <- read_csv("202209-divvy-tripdata.csv")
+oct22 <- read_csv("202210-divvy-tripdata.csv")
+nov22 <- read_csv("202211-divvy-tripdata.csv")
+dec22 <- read_csv("202212-divvy-tripdata.csv")
+jan23 <- read_csv("202301-divvy-tripdata.csv")
+feb23 <- read_csv("202302-divvy-tripdata.csv")
+mar23 <- read_csv("202303-divvy-tripdata.csv")
+apr23 <- read_csv("202304-divvy-tripdata.csv")
+
+# Using rbind command to merge all of this data into one dataframe. 
+processedBikeData <- rbind(may22, jun22, jul22,
+                           aug22, sep22, oct22,
+                           nov22, dec22, jan23,
+                           feb23, mar23, apr23)
+```
+
+With these tasks completed, our data is all in one place and ready for processing.
+
+## Process
+
+Now that all the preparations are done and we have one huge dataset with everything we need, let's start by checking out all of the features of this dataset:
+First, we can show the names of the columns in the dataset:
+```{r}
+colnames(processedBikeData)
+```
+We know that there are only a few columns in this dataset, but in order to learn more about them, let's look at the structure of the dataset:
+```{r}
+str(processedBikeData)
+```
+This gives us a comprehensive summary of our dataset. We are not missing any important information.
+Our dataset records:
+
+* The ride ID, which allows us to search any ride by its ID,
+* Exact start and end time of each ride
+* Starting and ending stations
+* Starting and ending station IDs, allowing us to search any station by ID,
+* Starting and ending latitude and Longitude coordinates,
+* And the name of the member that used this bike.
+
+Let's see a brief summary of this data:
+```{r}
+summary(processedBikeData)
+```
+Let's look at the first five rows of data, to get an even better understanding of it in action:
+```{r}
+head(processedBikeData)
+```
+Now, I will work with pipes:
+```{r}
+processedBikeData <- processedBikeData %>% 
+  drop_na() %>%                                    
+  mutate(trip_length = ended_at - started_at) %>% 
+  mutate(trip_dayofweek = weekdays(started_at)) %>% 
+  mutate(trip_month = month(started_at))
+processedBikeData
+```
+Let's recap:
+
+* I will be using R for the Data Analytics, as well as for my visualizations in this report. 
+* To ensure that my data is clean, I have checked the dataset for:
+  + No NA values
+  + No incorrectly-formatted dates
+  
+Now, I will move on to analyze this data. 
+
+## Analyze
+
+Now that we have processed our data, it is time for analysis.
+
+In the process phase, we know that the member_casual column of our dataset shows whether the rider is a member or casual rider. How many of each are there in our dataset?
+```{r}
+memberCount <- processedBikeData %>% 
+  group_by(member_casual) %>% 
+  summarise(count=n()) %>% 
+  mutate(ofTotalPercent = count/sum(count)*100)
+memberCount
+```
+```{r}
+ggplot(data = processedBikeData) + 
+  geom_bar(mapping=aes(x=member_casual))
+```
+We have about a 40/60 ratio of casual riders to cyclistic members, which is acceptable enough for analysis. If it were leaning a little more towards one side, I would have reconsidered the data I would have used for this analysis. '
+
+Another attribute of the dataset is rideable_type, which tells exactly which model of bike the different riders used. 
+Fortunately, we can color-code the above bar chart to make it so that it has different colors for the different bikes shown in our analysis.
+```{r}
+ggplot(data = processedBikeData) + 
+  geom_bar(mapping=aes(x=member_casual, fill = rideable_type))
+```
+
+Right off the bat, we have a few observations thanks to this chart:
+
+* Generally, Classic Bikes are preferred options over Electric bikes. 
+* Docked Bikes are only used by casual riders.
+
+Something else we measured in the process phase, was the ride length. I will now calculate an average ride length, to hopefully find another difference between Casuals and Members.
+```{r}
+meanRide <- processedBikeData %>% 
+  group_by(member_casual) %>% 
+  summarise(avg_trip_length = mean(trip_length))
+meanRide
+```
+It looks like casual members seem to have longer bike trips than members do!
+
+We also extracted the day of the week from the datetime object. Let's see if the day of the week has any correlation:
+```{r}
+ggplot(data = processedBikeData) + 
+  geom_bar(mapping = aes(x = trip_dayofweek)) + 
+  facet_wrap(~member_casual) + 
+  labs(title = "Days of Week: Casual vs. Member")
+```
+
+Another great set of observations to make note of:
+
+* Casual riders prefer weekends (Fridays, Saturdays, Sundays)
+* Members prefer riding during the week. (Monday - Friday)
+
+Next, why don't we measure by month?
+```{r}
+ggplot(data = processedBikeData) + 
+  geom_bar(mapping=aes(x = trip_month, fill = member_casual))
+```
+
+From left to right, we have January through December, respectively.
+From a general standpoint, a few observations are fair to make here:
+
+* During the Winter, (January, February, and December) bike usage hits its lowest in the entire year.
+* During the Spring, (March, April, and May) bike usage starts to pick up at an exponential rate.
+* During the Summer, (June, July, and August) bike usage plateaus, averaging more than 600000 riders!
+* During the Autumn, (September, October, and November) bike usage starts to decrease, though at a less exponential rate than the gain. 
+
+The filling of this plot reveals that barely any casual members ride during the months of January, February, March, April, November and December. Of all of the months of the year, we should avoid these five months to use our marketing strategies, and instead focus on the other ones.
+
+Why don't we take a look at the Stations? There are quite a few distinct stations, so this process might be a lengthy one, but nothing I can't handle.
+```{r}
+processedBikeData %>% 
+  group_by(start_station_name) %>% 
+  summarize(noOfRides = n()) %>% 
+  arrange(-noOfRides)
+```
+
+Ideally, we'd want to take the top 5 starting stations,so let's take this data and filter it to only show results from the top five stations:
+
+* Streeter Dr & Grand Ave
+* DuSable Lake Shore Dr & Monroe St
+* Michigan Ave & Oak St
+* DuSable Lake Shore Dr & North Blvd
+* Wells St & Concord Ln
+
+```{r}
+filteredBikeData = processedBikeData %>% 
+  filter(start_station_name == 'Streeter Dr & Grand Ave' | 
+         start_station_name == 'DuSable Lake Shore Dr & Monroe St' | 
+         start_station_name == 'Michigan Ave & Oak St' | 
+         start_station_name == 'DuSable Lake Shore Dr & North Blvd' |
+         start_station_name == 'Wells St & Concord Ln')
+```
+
+We have now made a subset of our dataset, that we can use for further analysis!
+```{r}
+ggplot(data = filteredBikeData) + 
+  geom_bar(mapping = aes(x = start_station_name)) + 
+  facet_wrap(~member_casual) + 
+  coord_flip() +
+  labs(title = "Best Starting Stations for Casual Riders and Members")
+```
+According to this graph, Streeter Dr. & Grand Ave houses a lot of the starting points for the casual riders, with DuSable Lake Sure Dr. and Monroe St. as a close second. Members, on the contrary, don't typically start at these two stations, so these two stations should be considered prime stations to target if we're looking for new members!
+
+How about ending stations? We will take a similar approach to when we did the starting stations:
+```{r}
+processedBikeData %>% 
+  group_by(end_station_name) %>% 
+  summarize(noOfRides = n()) %>% 
+  arrange(-noOfRides)
+```
+
+Similarly to starting stations, Streeter Dr. and Grand Ave seems to be the general favorite. let's grab the top 5 stations here and see how many casuals start at hem. 
+
+```{r}
+filteredEndBikeData = processedBikeData %>% 
+filter(  end_station_name == 'Streeter Dr & Grand Ave' | 
+         end_station_name == 'DuSable Lake Shore Dr & North Blvd' |
+         end_station_name == 'Michigan Ave & Oak St' | 
+         end_station_name == 'DuSable Lake Shore Dr & Monroe St' |
+         end_station_name == 'Wells St & Concord Ln')
+```
+
+
+```{r}
+ggplot(data = filteredEndBikeData) + 
+  geom_bar(mapping = aes(x = end_station_name)) + 
+  facet_wrap(~member_casual) + 
+  coord_flip() +
+  labs(title = "Best Starting Stations for Casual Riders and Members")
+```
+The results shown are very similar to those shown above, when we evaluated the starting stations. 
+
+In conclusion, we have made some very big observations about this whole study:
+
+* Generally, Classic Bikes are preferred options over Electric bikes. 
+* Casual riders prefer weekends (Fridays, Saturdays, Sundays), Members prefer riding during the week. (Monday - Friday)
+* During the Spring, (March, April, and May) bike usage starts to pick up at an exponential rate.
+* During the Summer, (June, July, and August) bike usage plateaus, averaging more than 600000 riders!
+* Streeter Dr & Grand Ave seems to be the most popular station with the two DuSable Stations in the top five bring prime targets for casual members.
+
+## Share & Act
+
+Based on the observations made during the data analysis, I would like to suggest to our manager:
+
+* At the top stations, put advertisements or posters that show the benefits of being a Cyclistic member.
+* Offer a special trial on the membership for the summer, with a reduced price. 
+* On the weekends, occasionally give a short trial of the membership. If you 
+* If all else fails, increase the price of bike rentals specifically on the weekends.
+
+My form of acting on my analysis comes in the form of this report. I will be sharing this report on my portfolio to showcase my newfound skills in Data Analytics. Thanks, Google!
+
+I hope my manager appreciates my report!
