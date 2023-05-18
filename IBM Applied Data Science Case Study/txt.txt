@@ -1,0 +1,2 @@
+this is supposed to be a readme!
+This is still a work-in-progress. A lot is still available at /coursera, /capstone and /labs!
