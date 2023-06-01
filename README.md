@@ -26,6 +26,12 @@ Inside this folder are several Jupyter Notebooks where I have made use of:
   + Beautiful Soup for Webscraping with Python
   + Scikit-Learn for Machine Learning Theory and Practice
 
+### School Projects
+
+* This is a folder that contains all Labs and Projects done in Software Engineering II and Object-Oriented Programming and Data Structures at Manhattan College. 
+  + Everything done in OOP is in C++.
+  + Everything done in SE II is in Java.
+
 ## Future Projects
 
 * The ABA Dataset
