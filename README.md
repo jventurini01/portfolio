@@ -39,6 +39,3 @@ Inside this folder are several Jupyter Notebooks where I have made use of:
 
 * ABA Web Application
   + I plan to use Python, Django, SQLite, and JavaScript to make a web application to ease teambuilding for players in my freelance project, the ABA Draft League, along with a possible forum, newsletter and other features that allow for displaying of features in The ABA Dataset. 
-
-* Labs from Manhattan College
-  + I plan to gether all of the labs I have completed at Manhattan College and put them here as well.
