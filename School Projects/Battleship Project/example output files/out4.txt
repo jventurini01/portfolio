@@ -1,0 +1,537 @@
+
+Enter the name of the input file now: P01_in4.txt
+
+Initializing board....
+
+Game board has been initialized....
+
+Placing boats onto the game board....
+
+  =====> Current Board Status <=====
+      0  1  2  3  4  5  6  7  8  9
+      ----------------------------
+  0:  .  .  .  .  .  .  .  .  .  .
+  1:  .  .  .  .  .  .  .  .  .  .
+  2:  .  .  .  .  .  .  .  .  .  .
+  3:  .  .  .  .  .  .  .  .  .  .
+  4:  .  .  .  .  .  .  .  .  .  .
+  5:  .  .  .  .  .  .  .  .  .  .
+  6:  .  .  .  .  .  .  .  .  .  .
+  7:  .  .  .  .  .  .  .  .  .  .
+  8:  .  .  .  .  .  .  .  .  .  .
+  9:  .  .  .  .  .  .  .  .  .  .
+
+For your guess, enter in the row and column positions of
+the game board.  Please enter the row value first.
+
+ROW value (From 0 to 9): 0
+
+COLUMN value (From 0 to 9): 0
+
+......Miss!!!
+
+  =====> Current Board Status <=====
+      0  1  2  3  4  5  6  7  8  9
+      ----------------------------
+  0:  X  .  .  .  .  .  .  .  .  .
+  1:  .  .  .  .  .  .  .  .  .  .
+  2:  .  .  .  .  .  .  .  .  .  .
+  3:  .  .  .  .  .  .  .  .  .  .
+  4:  .  .  .  .  .  .  .  .  .  .
+  5:  .  .  .  .  .  .  .  .  .  .
+  6:  .  .  .  .  .  .  .  .  .  .
+  7:  .  .  .  .  .  .  .  .  .  .
+  8:  .  .  .  .  .  .  .  .  .  .
+  9:  .  .  .  .  .  .  .  .  .  .
+
+For your guess, enter in the row and column positions of
+the game board.  Please enter the row value first.
+
+ROW value (From 0 to 9): 1
+
+COLUMN value (From 0 to 9): 1
+
+......Hit!!!
+
+  =====> Current Board Status <=====
+      0  1  2  3  4  5  6  7  8  9
+      ----------------------------
+  0:  X  .  .  .  .  .  .  .  .  .
+  1:  .  H  .  .  .  .  .  .  .  .
+  2:  .  .  .  .  .  .  .  .  .  .
+  3:  .  .  .  .  .  .  .  .  .  .
+  4:  .  .  .  .  .  .  .  .  .  .
+  5:  .  .  .  .  .  .  .  .  .  .
+  6:  .  .  .  .  .  .  .  .  .  .
+  7:  .  .  .  .  .  .  .  .  .  .
+  8:  .  .  .  .  .  .  .  .  .  .
+  9:  .  .  .  .  .  .  .  .  .  .
+
+For your guess, enter in the row and column positions of
+the game board.  Please enter the row value first.
+
+ROW value (From 0 to 9): 2
+
+COLUMN value (From 0 to 9): 1
+
+......Hit!!!
+
+  =====> Current Board Status <=====
+      0  1  2  3  4  5  6  7  8  9
+      ----------------------------
+  0:  X  .  .  .  .  .  .  .  .  .
+  1:  .  H  .  .  .  .  .  .  .  .
+  2:  .  H  .  .  .  .  .  .  .  .
+  3:  .  .  .  .  .  .  .  .  .  .
+  4:  .  .  .  .  .  .  .  .  .  .
+  5:  .  .  .  .  .  .  .  .  .  .
+  6:  .  .  .  .  .  .  .  .  .  .
+  7:  .  .  .  .  .  .  .  .  .  .
+  8:  .  .  .  .  .  .  .  .  .  .
+  9:  .  .  .  .  .  .  .  .  .  .
+
+For your guess, enter in the row and column positions of
+the game board.  Please enter the row value first.
+
+ROW value (From 0 to 9): 3
+
+COLUMN value (From 0 to 9): 1
+
+......Hit!!!
+You sank boat #1
+
+  =====> Current Board Status <=====
+      0  1  2  3  4  5  6  7  8  9
+      ----------------------------
+  0:  X  .  .  .  .  .  .  .  .  .
+  1:  .  H  .  .  .  .  .  .  .  .
+  2:  .  H  .  .  .  .  .  .  .  .
+  3:  .  H  .  .  .  .  .  .  .  .
+  4:  .  .  .  .  .  .  .  .  .  .
+  5:  .  .  .  .  .  .  .  .  .  .
+  6:  .  .  .  .  .  .  .  .  .  .
+  7:  .  .  .  .  .  .  .  .  .  .
+  8:  .  .  .  .  .  .  .  .  .  .
+  9:  .  .  .  .  .  .  .  .  .  .
+
+For your guess, enter in the row and column positions of
+the game board.  Please enter the row value first.
+
+ROW value (From 0 to 9): 6
+
+COLUMN value (From 0 to 9): 6
+
+......Miss!!!
+
+  =====> Current Board Status <=====
+      0  1  2  3  4  5  6  7  8  9
+      ----------------------------
+  0:  X  .  .  .  .  .  .  .  .  .
+  1:  .  H  .  .  .  .  .  .  .  .
+  2:  .  H  .  .  .  .  .  .  .  .
+  3:  .  H  .  .  .  .  .  .  .  .
+  4:  .  .  .  .  .  .  .  .  .  .
+  5:  .  .  .  .  .  .  .  .  .  .
+  6:  .  .  .  .  .  .  X  .  .  .
+  7:  .  .  .  .  .  .  .  .  .  .
+  8:  .  .  .  .  .  .  .  .  .  .
+  9:  .  .  .  .  .  .  .  .  .  .
+
+For your guess, enter in the row and column positions of
+the game board.  Please enter the row value first.
+
+ROW value (From 0 to 9): 1
+
+COLUMN value (From 0 to 9): 1
+
+INVALID CHOICE!!! please choose a position marked with a '.'
+
+  =====> Current Board Status <=====
+      0  1  2  3  4  5  6  7  8  9
+      ----------------------------
+  0:  X  .  .  .  .  .  .  .  .  .
+  1:  .  H  .  .  .  .  .  .  .  .
+  2:  .  H  .  .  .  .  .  .  .  .
+  3:  .  H  .  .  .  .  .  .  .  .
+  4:  .  .  .  .  .  .  .  .  .  .
+  5:  .  .  .  .  .  .  .  .  .  .
+  6:  .  .  .  .  .  .  X  .  .  .
+  7:  .  .  .  .  .  .  .  .  .  .
+  8:  .  .  .  .  .  .  .  .  .  .
+  9:  .  .  .  .  .  .  .  .  .  .
+
+For your guess, enter in the row and column positions of
+the game board.  Please enter the row value first.
+
+ROW value (From 0 to 9): 3
+
+COLUMN value (From 0 to 9): 1
+
+INVALID CHOICE!!! please choose a position marked with a '.'
+
+  =====> Current Board Status <=====
+      0  1  2  3  4  5  6  7  8  9
+      ----------------------------
+  0:  X  .  .  .  .  .  .  .  .  .
+  1:  .  H  .  .  .  .  .  .  .  .
+  2:  .  H  .  .  .  .  .  .  .  .
+  3:  .  H  .  .  .  .  .  .  .  .
+  4:  .  .  .  .  .  .  .  .  .  .
+  5:  .  .  .  .  .  .  .  .  .  .
+  6:  .  .  .  .  .  .  X  .  .  .
+  7:  .  .  .  .  .  .  .  .  .  .
+  8:  .  .  .  .  .  .  .  .  .  .
+  9:  .  .  .  .  .  .  .  .  .  .
+
+For your guess, enter in the row and column positions of
+the game board.  Please enter the row value first.
+
+ROW value (From 0 to 9): 8
+
+COLUMN value (From 0 to 9): 9
+
+......Hit!!!
+
+  =====> Current Board Status <=====
+      0  1  2  3  4  5  6  7  8  9
+      ----------------------------
+  0:  X  .  .  .  .  .  .  .  .  .
+  1:  .  H  .  .  .  .  .  .  .  .
+  2:  .  H  .  .  .  .  .  .  .  .
+  3:  .  H  .  .  .  .  .  .  .  .
+  4:  .  .  .  .  .  .  .  .  .  .
+  5:  .  .  .  .  .  .  .  .  .  .
+  6:  .  .  .  .  .  .  X  .  .  .
+  7:  .  .  .  .  .  .  .  .  .  .
+  8:  .  .  .  .  .  .  .  .  .  H
+  9:  .  .  .  .  .  .  .  .  .  .
+
+For your guess, enter in the row and column positions of
+the game board.  Please enter the row value first.
+
+ROW value (From 0 to 9): 6
+
+COLUMN value (From 0 to 9): 6
+
+INVALID CHOICE!!! please choose a position marked with a '.'
+
+  =====> Current Board Status <=====
+      0  1  2  3  4  5  6  7  8  9
+      ----------------------------
+  0:  X  .  .  .  .  .  .  .  .  .
+  1:  .  H  .  .  .  .  .  .  .  .
+  2:  .  H  .  .  .  .  .  .  .  .
+  3:  .  H  .  .  .  .  .  .  .  .
+  4:  .  .  .  .  .  .  .  .  .  .
+  5:  .  .  .  .  .  .  .  .  .  .
+  6:  .  .  .  .  .  .  X  .  .  .
+  7:  .  .  .  .  .  .  .  .  .  .
+  8:  .  .  .  .  .  .  .  .  .  H
+  9:  .  .  .  .  .  .  .  .  .  .
+
+For your guess, enter in the row and column positions of
+the game board.  Please enter the row value first.
+
+ROW value (From 0 to 9): 5
+
+COLUMN value (From 0 to 9): 5
+
+......Miss!!!
+
+  =====> Current Board Status <=====
+      0  1  2  3  4  5  6  7  8  9
+      ----------------------------
+  0:  X  .  .  .  .  .  .  .  .  .
+  1:  .  H  .  .  .  .  .  .  .  .
+  2:  .  H  .  .  .  .  .  .  .  .
+  3:  .  H  .  .  .  .  .  .  .  .
+  4:  .  .  .  .  .  .  .  .  .  .
+  5:  .  .  .  .  .  X  .  .  .  .
+  6:  .  .  .  .  .  .  X  .  .  .
+  7:  .  .  .  .  .  .  .  .  .  .
+  8:  .  .  .  .  .  .  .  .  .  H
+  9:  .  .  .  .  .  .  .  .  .  .
+
+For your guess, enter in the row and column positions of
+the game board.  Please enter the row value first.
+
+ROW value (From 0 to 9): 9
+
+COLUMN value (From 0 to 9): 9
+
+......Hit!!!
+
+  =====> Current Board Status <=====
+      0  1  2  3  4  5  6  7  8  9
+      ----------------------------
+  0:  X  .  .  .  .  .  .  .  .  .
+  1:  .  H  .  .  .  .  .  .  .  .
+  2:  .  H  .  .  .  .  .  .  .  .
+  3:  .  H  .  .  .  .  .  .  .  .
+  4:  .  .  .  .  .  .  .  .  .  .
+  5:  .  .  .  .  .  X  .  .  .  .
+  6:  .  .  .  .  .  .  X  .  .  .
+  7:  .  .  .  .  .  .  .  .  .  .
+  8:  .  .  .  .  .  .  .  .  .  H
+  9:  .  .  .  .  .  .  .  .  .  H
+
+For your guess, enter in the row and column positions of
+the game board.  Please enter the row value first.
+
+ROW value (From 0 to 9): 0
+
+COLUMN value (From 0 to 9): 0
+
+INVALID CHOICE!!! please choose a position marked with a '.'
+
+  =====> Current Board Status <=====
+      0  1  2  3  4  5  6  7  8  9
+      ----------------------------
+  0:  X  .  .  .  .  .  .  .  .  .
+  1:  .  H  .  .  .  .  .  .  .  .
+  2:  .  H  .  .  .  .  .  .  .  .
+  3:  .  H  .  .  .  .  .  .  .  .
+  4:  .  .  .  .  .  .  .  .  .  .
+  5:  .  .  .  .  .  X  .  .  .  .
+  6:  .  .  .  .  .  .  X  .  .  .
+  7:  .  .  .  .  .  .  .  .  .  .
+  8:  .  .  .  .  .  .  .  .  .  H
+  9:  .  .  .  .  .  .  .  .  .  H
+
+For your guess, enter in the row and column positions of
+the game board.  Please enter the row value first.
+
+ROW value (From 0 to 9): 3
+
+COLUMN value (From 0 to 9): 1
+
+INVALID CHOICE!!! please choose a position marked with a '.'
+
+  =====> Current Board Status <=====
+      0  1  2  3  4  5  6  7  8  9
+      ----------------------------
+  0:  X  .  .  .  .  .  .  .  .  .
+  1:  .  H  .  .  .  .  .  .  .  .
+  2:  .  H  .  .  .  .  .  .  .  .
+  3:  .  H  .  .  .  .  .  .  .  .
+  4:  .  .  .  .  .  .  .  .  .  .
+  5:  .  .  .  .  .  X  .  .  .  .
+  6:  .  .  .  .  .  .  X  .  .  .
+  7:  .  .  .  .  .  .  .  .  .  .
+  8:  .  .  .  .  .  .  .  .  .  H
+  9:  .  .  .  .  .  .  .  .  .  H
+
+For your guess, enter in the row and column positions of
+the game board.  Please enter the row value first.
+
+ROW value (From 0 to 9): 4
+
+COLUMN value (From 0 to 9): 4
+
+......Hit!!!
+
+  =====> Current Board Status <=====
+      0  1  2  3  4  5  6  7  8  9
+      ----------------------------
+  0:  X  .  .  .  .  .  .  .  .  .
+  1:  .  H  .  .  .  .  .  .  .  .
+  2:  .  H  .  .  .  .  .  .  .  .
+  3:  .  H  .  .  .  .  .  .  .  .
+  4:  .  .  .  .  H  .  .  .  .  .
+  5:  .  .  .  .  .  X  .  .  .  .
+  6:  .  .  .  .  .  .  X  .  .  .
+  7:  .  .  .  .  .  .  .  .  .  .
+  8:  .  .  .  .  .  .  .  .  .  H
+  9:  .  .  .  .  .  .  .  .  .  H
+
+For your guess, enter in the row and column positions of
+the game board.  Please enter the row value first.
+
+ROW value (From 0 to 9): 4
+
+COLUMN value (From 0 to 9): 5
+
+......Hit!!!
+
+  =====> Current Board Status <=====
+      0  1  2  3  4  5  6  7  8  9
+      ----------------------------
+  0:  X  .  .  .  .  .  .  .  .  .
+  1:  .  H  .  .  .  .  .  .  .  .
+  2:  .  H  .  .  .  .  .  .  .  .
+  3:  .  H  .  .  .  .  .  .  .  .
+  4:  .  .  .  .  H  H  .  .  .  .
+  5:  .  .  .  .  .  X  .  .  .  .
+  6:  .  .  .  .  .  .  X  .  .  .
+  7:  .  .  .  .  .  .  .  .  .  .
+  8:  .  .  .  .  .  .  .  .  .  H
+  9:  .  .  .  .  .  .  .  .  .  H
+
+For your guess, enter in the row and column positions of
+the game board.  Please enter the row value first.
+
+ROW value (From 0 to 9): 7
+
+COLUMN value (From 0 to 9): 9
+
+......Hit!!!
+You sank boat #2
+
+  =====> Current Board Status <=====
+      0  1  2  3  4  5  6  7  8  9
+      ----------------------------
+  0:  X  .  .  .  .  .  .  .  .  .
+  1:  .  H  .  .  .  .  .  .  .  .
+  2:  .  H  .  .  .  .  .  .  .  .
+  3:  .  H  .  .  .  .  .  .  .  .
+  4:  .  .  .  .  H  H  .  .  .  .
+  5:  .  .  .  .  .  X  .  .  .  .
+  6:  .  .  .  .  .  .  X  .  .  .
+  7:  .  .  .  .  .  .  .  .  .  H
+  8:  .  .  .  .  .  .  .  .  .  H
+  9:  .  .  .  .  .  .  .  .  .  H
+
+For your guess, enter in the row and column positions of
+the game board.  Please enter the row value first.
+
+ROW value (From 0 to 9): 4
+
+COLUMN value (From 0 to 9): 6
+
+......Hit!!!
+You sank boat #3
+
+  =====> Current Board Status <=====
+      0  1  2  3  4  5  6  7  8  9
+      ----------------------------
+  0:  X  .  .  .  .  .  .  .  .  .
+  1:  .  H  .  .  .  .  .  .  .  .
+  2:  .  H  .  .  .  .  .  .  .  .
+  3:  .  H  .  .  .  .  .  .  .  .
+  4:  .  .  .  .  H  H  H  .  .  .
+  5:  .  .  .  .  .  X  .  .  .  .
+  6:  .  .  .  .  .  .  X  .  .  .
+  7:  .  .  .  .  .  .  .  .  .  H
+  8:  .  .  .  .  .  .  .  .  .  H
+  9:  .  .  .  .  .  .  .  .  .  H
+
+For your guess, enter in the row and column positions of
+the game board.  Please enter the row value first.
+
+ROW value (From 0 to 9): 8
+
+COLUMN value (From 0 to 9): 6
+
+......Hit!!!
+
+  =====> Current Board Status <=====
+      0  1  2  3  4  5  6  7  8  9
+      ----------------------------
+  0:  X  .  .  .  .  .  .  .  .  .
+  1:  .  H  .  .  .  .  .  .  .  .
+  2:  .  H  .  .  .  .  .  .  .  .
+  3:  .  H  .  .  .  .  .  .  .  .
+  4:  .  .  .  .  H  H  H  .  .  .
+  5:  .  .  .  .  .  X  .  .  .  .
+  6:  .  .  .  .  .  .  X  .  .  .
+  7:  .  .  .  .  .  .  .  .  .  H
+  8:  .  .  .  .  .  .  H  .  .  H
+  9:  .  .  .  .  .  .  .  .  .  H
+
+For your guess, enter in the row and column positions of
+the game board.  Please enter the row value first.
+
+ROW value (From 0 to 9): 4
+
+COLUMN value (From 0 to 9): 5
+
+INVALID CHOICE!!! please choose a position marked with a '.'
+
+  =====> Current Board Status <=====
+      0  1  2  3  4  5  6  7  8  9
+      ----------------------------
+  0:  X  .  .  .  .  .  .  .  .  .
+  1:  .  H  .  .  .  .  .  .  .  .
+  2:  .  H  .  .  .  .  .  .  .  .
+  3:  .  H  .  .  .  .  .  .  .  .
+  4:  .  .  .  .  H  H  H  .  .  .
+  5:  .  .  .  .  .  X  .  .  .  .
+  6:  .  .  .  .  .  .  X  .  .  .
+  7:  .  .  .  .  .  .  .  .  .  H
+  8:  .  .  .  .  .  .  H  .  .  H
+  9:  .  .  .  .  .  .  .  .  .  H
+
+For your guess, enter in the row and column positions of
+the game board.  Please enter the row value first.
+
+ROW value (From 0 to 9): 8
+
+COLUMN value (From 0 to 9): 7
+
+......Hit!!!
+
+  =====> Current Board Status <=====
+      0  1  2  3  4  5  6  7  8  9
+      ----------------------------
+  0:  X  .  .  .  .  .  .  .  .  .
+  1:  .  H  .  .  .  .  .  .  .  .
+  2:  .  H  .  .  .  .  .  .  .  .
+  3:  .  H  .  .  .  .  .  .  .  .
+  4:  .  .  .  .  H  H  H  .  .  .
+  5:  .  .  .  .  .  X  .  .  .  .
+  6:  .  .  .  .  .  .  X  .  .  .
+  7:  .  .  .  .  .  .  .  .  .  H
+  8:  .  .  .  .  .  .  H  H  .  H
+  9:  .  .  .  .  .  .  .  .  .  H
+
+For your guess, enter in the row and column positions of
+the game board.  Please enter the row value first.
+
+ROW value (From 0 to 9): 4
+
+COLUMN value (From 0 to 9): 5
+
+INVALID CHOICE!!! please choose a position marked with a '.'
+
+  =====> Current Board Status <=====
+      0  1  2  3  4  5  6  7  8  9
+      ----------------------------
+  0:  X  .  .  .  .  .  .  .  .  .
+  1:  .  H  .  .  .  .  .  .  .  .
+  2:  .  H  .  .  .  .  .  .  .  .
+  3:  .  H  .  .  .  .  .  .  .  .
+  4:  .  .  .  .  H  H  H  .  .  .
+  5:  .  .  .  .  .  X  .  .  .  .
+  6:  .  .  .  .  .  .  X  .  .  .
+  7:  .  .  .  .  .  .  .  .  .  H
+  8:  .  .  .  .  .  .  H  H  .  H
+  9:  .  .  .  .  .  .  .  .  .  H
+
+For your guess, enter in the row and column positions of
+the game board.  Please enter the row value first.
+
+ROW value (From 0 to 9): 8
+
+COLUMN value (From 0 to 9): 8
+
+......Hit!!!
+You sank boat #4
+
+CONGRATULATIONS!!!  You sunk all four boats.
+It took 15 shots to sink all the boats.
+Your percentage of hits is 80.00%.
+
+  =====> Current Board Status <=====
+      0  1  2  3  4  5  6  7  8  9
+      ----------------------------
+  0:  X  .  .  .  .  .  .  .  .  .
+  1:  .  H  .  .  .  .  .  .  .  .
+  2:  .  H  .  .  .  .  .  .  .  .
+  3:  .  H  .  .  .  .  .  .  .  .
+  4:  .  .  .  .  H  H  H  .  .  .
+  5:  .  .  .  .  .  X  .  .  .  .
+  6:  .  .  .  .  .  .  X  .  .  .
+  7:  .  .  .  .  .  .  .  .  .  H
+  8:  .  .  .  .  .  .  H  H  H  H
+  9:  .  .  .  .  .  .  .  .  .  H
+

@@ -1,0 +1,24 @@
+
+Enter the name of the input file now: Not/A/File.txt
+
+***********  File Open Error  ***********
+==> Input file failed to open properly!!
+==> Attempted to open file: Not/A/File.txt
+==> Please try again...
+*****************************************
+
+Enter the name of the input file now: Bad/File/txt
+
+***********  File Open Error  ***********
+==> Input file failed to open properly!!
+==> Attempted to open file: Bad/File/txt
+==> Please try again...
+*****************************************
+
+Enter the name of the input file now: P01_in3.txt
+
+************  File Is Empty  ************
+==> Input configuration file is empty
+==> No information to process
+==> Program is terminating
+*****************************************

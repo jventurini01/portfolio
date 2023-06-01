@@ -1,0 +1,8 @@
+
+Enter the name of the input file now: P01_in2.txt
+
+************  File Is Empty  ************
+==> Input configuration file is empty
+==> No information to process
+==> Program is terminating
+*****************************************
