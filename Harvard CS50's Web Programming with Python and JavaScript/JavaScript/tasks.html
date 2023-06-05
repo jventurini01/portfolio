@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tasks</title>
+        <script>
+            //When all content is loaded
+            document.addEventListener("DOMContentLoaded", function() {
+
+                //by default, submit button is disabled
+                document.querySelector('#submit').disabled = true;
+
+                //add another listener that enables the submit button when text is placed. 
+                document.querySelector('#task').onkeyup = () => {
+                    if (document.querySelector('#task').value.length > 0) {
+                        document.querySelector('#submit').disabled = false;
+                    } else {
+                        document.querySelector('#submit').disabled = true;
+                    }                    
+                }
+
+                //Select the form and when it is submitted
+                document.querySelector('form').onsubmit = () => {
+                    //Grab the element with the ID of Task, and store its value to a variable called task
+                    const task = document.querySelector('#task').value;
+                    
+                    //Then, since we have an unordered list, we would like to create list elements.
+                    const li = document.createElement('li');
+                    
+                    //Afterwards, change the inner HTML of that list element we have created to the task.
+                    li.innerHTML = task;
+
+                    //Finally, 
+                    document.querySelector('#tasks').append(li);
+
+                    //Clear the text box after the form is submitted:
+                    document.querySelectot("#task").value = '';
+
+                    //disabled the submit button after form is submitted again
+                    document.querySelector('#submit').disabled = true;
+
+
+                    //stop form from submitting
+                    //For Debugging purposes only -- with the JS Console
+                    return false;
+                }
+            })
+
+
+
+
+        </script>
+    </head>
+    <body>
+        <h1>Tasks</h1>
+        <ul id="tasks">
+
+        </ul>
+
+        <form>
+            <input id="task" placeholder="New Task" type="text">
+            <input id="submit" type="submit">
+        </form>
+    </body>
+</html>

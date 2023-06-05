@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Currency Exchange</title>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                //fetch me the latest exchange rates
+                fetch('https://api.exchangeratesapi.io/latest?access_key=tpLiM8NG4vXrVDOWqmTLSzomhhDII4xb&base=USD')
+
+                //convert response to json data
+                .then(response => response.json())
+                .then(data => {
+                    const rate = data.rates[currency];
+                    if(rate !== undefined) {
+                        documet.queryselector('#result').innerHTML = `1 USD is equal to`
+                    })
+                    document.querySelector('body').innerHTML = rate
+                })
+            });
+        </script>
+    </head>
+    <body>    
+        <form action="">
+            <input type="text" id="currency" placeholder="currency"
+        </form>
+    </body>
+</html>

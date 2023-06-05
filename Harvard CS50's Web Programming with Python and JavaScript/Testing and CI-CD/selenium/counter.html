@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Counter</title>
+        <script>
+            //Run this once everythng loads
+            document.addEventListener("DOMContentLoaded", () => {
+                
+                //counter is initially 0
+                let counter = 0;
+
+                //If the increase button is pressed
+                document.querySelector('#increase').onclick = () => {
+                    //increment the counter by 1
+                    counter++;
+
+                    //then set the innerHTML to the counter
+                    document.querySelector('h1').innerHTML = counter;
+                }
+
+                //if the decrease buttton is pressed
+                document.querySelector('#decrease').onclick = () => {
+                    //decrement the counter by 1
+                    counter--;
+
+                    //then set the innerHTML to the counter
+                    document.querySelector('h1').innerHTML = counter;
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <h1>0</h1>
+        <button id="increase">+</button>
+        <button id="decrease">-</button>
+    </body>
+</html>
